@@ -15,9 +15,10 @@ body {
     background-image: url(images/bg-desktop.svg);
     background-color: hsl(257, 40%, 49%) ;
     color: white;
-    height:100vh;
+    min-height:100vh;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid #000000 */
 }
 
 /* ------------header-----------*/
@@ -25,25 +26,28 @@ body {
 header{
     display: flex;
     justify-content: flex-start;
+    /* border: 1px solid #000000 */
 }
 
 .logo {
     margin: 2em;
-    ali
 }
 
 /* ------------body-----------*/
 
 .main {
     display: flex;
-    justify-content: space-evenly;
+    flex: 1;
+    justify-content: row-reverse;
     height: 60%;
     font-family: 'Poppins', sans-serif;
+    /* border: 1px solid #000000 */
 }
 
 .main div{
     width: 50%;
     margin: 2em;
+    /* border: 1px solid #000000 */
 }
 
 h2{
@@ -60,7 +64,8 @@ button {
     margin-top: 1em;
     font-size: 1.5em;
     color: hsl(257, 40%, 49%);
-    border-radius: 30px
+    border-radius: 30px;
+    /* box-shadow: 5px 10px 8px #1a1919 */
 }
 
 /* ------------footer-----------*/
@@ -68,7 +73,8 @@ button {
 footer{
     height: 20%;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    /* border: 1px solid #000000 */
 }
 
 i {
@@ -79,6 +85,68 @@ i {
 
 i:nth-child(3){
     margin-right: 4em;
+}
+
+
+@media screen and (max-width: 800px){
+
+    /* header, footer, .main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } */
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vh;
+    }
+
+    .main div{
+        display:flex;
+        flex-direction: column;
+        height: 50%;
+        width: 70%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main img{
+        width: 60%;
+        height: 80%;
+    }
+
+    h2{
+        font-size: 2.5em;
+    }
+
+    header{
+        align-self: flex-start
+    }
+
+   footer{
+       display: flex;
+       justify-content: center;
+   }
+
+   i{
+       margin: 0.3em;
+   }
+
+   i:nth-child(3){
+    margin-right: 1em;
+}
+
+    
 }
 
 
